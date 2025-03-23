@@ -65,17 +65,18 @@
 </head>
 
 <body>
-    <div class="main-content">
+    <div class="container">
         <h1>SSK Careers</h1>
-
         <img id="banner" src="./static/homeimg.jpg" alt="home image">
-
+    </div>
+    <div class="main-content">
         <h2>About SSK Careers</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laudantium Lorem ipsum dolor sit amet
             consectetur, adipisicing elit. Maiores commodi mollitia quasi consequatur doloribus sed iure corrupti
             dolores alias consectetur delectus similique reiciendis facilis tempora quae, labore iusto quam laborum!
             Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Aperiam id nisi cum maxime praesentium, quibusdam vitae dolore
+            dolor sit amet consectetur adipisicing elit. Aperiam id nisi cum maxime praesentium, quibusdam vitae
+            dolore
             accusantium eum soluta nam aut officiis labore ipsum quasi unde, reiciendis doloribus? Aut!</p>
 
         <h2>Open Positions</h2>
@@ -97,14 +98,20 @@
                 </div>
 
                 <div>
-                    <button type="button" class="btn btn-outline-success">Apply</button>
+                    <a
+                        href="mailto:jobapplications@sskcareers.com?subject=Application%20for%20{{job['title']}}&body=My%20name%3A%20%3C%3Cyour%20name%20here%3E%3E%0Aresume%3A%20%3C%3Cyour%20resume%20file%3E%3E%0Alinkedin%3A%20%3C%3Cyour%20linkedin%3E%3E">
+                        <button type="button" class="btn btn-outline-success">Apply</button>
+                    </a>
                 </div>
             </div>
             {% endfor %}
         </div>
 
         <div class="text-center mt-4">
-            <button id="btn1" class="btn btn-secondary">Contact Us</button>
+            <a
+                href="mailto:jobapplications@sskcareers.com?subject=Inquiry%20&body=%3C%3Ctype%20your%20question%20here%3E%3E">
+                <button id="btn1" class="btn btn-secondary">Contact Us</button>
+            </a>
         </div>
 
         <div class="footer">
