@@ -42,6 +42,7 @@
                 <p>{{job.responsibility}}</p>
                 <h3>Requirements</h3>
                 <p>{{job.requirments}}</p>
+                <br>
                 <a
                     href="mailto:jobapplications@sskcareers.com?subject=Application%20for%20{{job['title']}}&body=My%20name%3A%20%3C%3Cyour%20name%20here%3E%3E%0Aresume%3A%20%3C%3Cyour%20resume%20file%3E%3E%0Alinkedin%3A%20%3C%3Cyour%20linkedin%3E%3E">
                     <button type="button" class="btn btn-outline-success">Apply</button>
@@ -49,13 +50,24 @@
             </div>
 
             <div class="col-md-5 text-center">
-
                 <img src="{{ url_for('static', filename='jobpage.jpg') }}" alt="Job Image" class="img-fluid rounded">
-
             </div>
         </div>
     </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted text-center">© 2022 Company, Inc</span>
+            </div>
+        </footer>
     </div>
+    </div>
+
 
 </body>
 
