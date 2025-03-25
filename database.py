@@ -29,5 +29,16 @@ def load_job_by_id(id):
         else:
             # Convert row to dictionary using ._mapping
             return dict(rows._mapping)
-       
         
+def add_application_to_db(job_id, data):
+    with engine.connect() as conn:
+        query = text("INSERT INTO applications (job_id, full_name, email, linkedin, resume) VALUES (:job_id, :full_name, :email, :linkedin, :resume)")
+
+        conn.execute(query, { 
+            "job_id": job_id,  
+            "full_name": data.get("full_name", ""),  
+            "email": data.get("email", ""),  
+            "linkedin": data.get("linkedin", ""),  
+            "resume": data.get("resume", "")  
+        })
+        conn.commit()

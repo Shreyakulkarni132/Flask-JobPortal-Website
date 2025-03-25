@@ -1,17 +1,25 @@
-<h3>Application form</h3>
-<form>
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="email" class="form-control" id="name" placeholder="bob vance">
-    </div>
-    <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-        <label for="linkedIn">LinkedIn</label>
-        <input type="text" class="form-control" id="linkedIn" placeholder="https://www.linkedin.com/in/username">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<div class="container">
+    <h3>Application form</h3>
+    <form action="/job/{{job['id']}}/apply" method="post">
+        <div class="form-group">
+            <label for="full_name">Name</label>
+            <input type="text" class="form-control" id="full_name" name="full_name" placeholder="bob vance">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="linkedIn">LinkedIn URL</label>
+            <input type="text" class="form-control" id="linkedIn" name="linkedin"
+                placeholder="https://www.linkedin.com/in/username">
+        </div>
+        <div class="form-group">
+            <label for="resume">Resume URL</label>
+            <input type="text" class="form-control" id="resume" name="resume"
+                placeholder="https://www.example.com/resume">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
