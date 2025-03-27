@@ -16,9 +16,9 @@
 - **Deployment**: Render
   
 ## Deployment
--Clone the repository \n
--Install dependencies: pip install -r requirements.txt
--Set up the database & environment variables
+-Clone the repository <br>
+-Install dependencies: pip install -r requirements.txt <br>
+-Set up the database & environment variables <br>
 -Run the application: flask run
 
 ## Learnings
